@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+button {
+  transform: scale(1);
+  transition: transform 100ms ease-in-out; /* smooth transition both ways */
+}
+
+.boxend img:hover {
+  transform: scale(1.1);
+}
+
+.boxend img {
+  transform: scale(1);
+  transition: transform 200ms ease-in-out; /* smooth transition both ways */
+}
+
+.ripple-effect {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(187, 247, 208, 0.6); /* Tailwind green-200 with opacity */
+  transform: scale(0);
+  animation: ripple 600ms linear;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.boxupper img:hover {
+  box-shadow: 0 0 12px 4px rgba(227, 136, 25, 0.2); /* glow effect */
+}
